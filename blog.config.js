@@ -1,10 +1,10 @@
 const BLOG = {
-  title: 'JaeYun 개발 블로그', // 블로그 제목 → 원하는 이름으로 수정
+  title: 'YUNTLIN', // 블로그 제목 → 원하는 이름으로 수정
   author: 'JaeYun Lee', // 작성자 이름 → 본인 이름으로 수정
   email: 'jaeyun9292@gmail.com', // 연락 이메일 → 본인 이메일 주소로 수정
   link: 'https://blog-jaeyun.vercel.app/', // 사이트 링크 → 배포된 블로그 주소로 수정
   description: '안드로이드를 중심으로 개발 지식과 경험을 기록합니다.', // 블로그 설명 → 한글로 바꿔도 됨
-  lang: 'ko-KR', // 언어 설정 → 'ko-KR'로 바꿔도 됩니다
+  lang: 'en-US', 
   timezone: 'Asia/Seoul', // 시간대 → 한국이면 'Asia/Seoul'로 변경
   appearance: 'auto', // 테마 (auto, light, dark)
   font: 'sans-serif', // 글꼴 스타일
