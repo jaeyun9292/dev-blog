@@ -6,18 +6,19 @@ const BLOG = {
   description: '안드로이드를 중심으로 개발 지식과 경험을 기록합니다.', // 블로그 설명 → 한글로 바꿔도 됨
   lang: 'en-US', 
   timezone: 'Asia/Seoul', // 시간대 → 한국이면 'Asia/Seoul'로 변경
-  appearance: 'auto', // 테마 (auto, light, dark)
+  appearance: 'dark', // 테마 (auto, light, dark)
   font: 'sans-serif', // 글꼴 스타일
   path: '', // 폴더형 배포 아니면 그대로 둡니다
   lightBackground: '#ffffff', // use hex value, don't forget '#' e.g #fffefc
   darkBackground: '#18181B', // use hex value, don't forget '#'
   since: 2021, // 블로그 시작 년도 (빈 값이면 현재 연도 사용)
-  postsPerPage: 7, // 한 페이지에 표시할 글 수
+  postsPerPage: 8, // 한 페이지에 표시할 글 수
   sortByDate: true, // 최신순 정렬 여부
   showAbout: true, // About 페이지 표시 여부
   showArchive: true, // Archive 페이지 표시 여부
   autoCollapsedNavBar: false, // 상단 내비게이션 자동 접힘 여부
-  ogImageGenerateURL: 'https://og-image-craigary.vercel.app', // The link to generate OG image, don't end with a slash
+  // ogImageGenerateURL: 'https://og-image-craigary.vercel.app', // The link to generate OG image, don't end with a slash
+  ogImageGenerateURL: false,
   socialLink: 'https://github.com/jaeyun9292',
   seo: {
     keywords: ['안드로이드', 'Android', '개발 블로그', '클린 아키텍처', 'Android CleanArchitecture', '안드로이드 클린 아키텍처','Android Compose', '안드로이드 컴포즈'],

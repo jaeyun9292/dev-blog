@@ -11,6 +11,7 @@ import { LocaleProvider } from '@/lib/locale'
 import { prepareDayjs } from '@/lib/dayjs'
 import { ThemeProvider } from '@/lib/theme'
 import Scripts from '@/components/Scripts'
+import Head from 'next/head'
 
 const Ackee = dynamic(() => import('@/components/Ackee'), { ssr: false })
 const Gtag = dynamic(() => import('@/components/Gtag'), { ssr: false })
@@ -21,6 +22,12 @@ export default function MyApp ({ Component, pageProps, config, locale }) {
       <Scripts />
       <LocaleProvider value={locale}>
         <ThemeProvider>
+          <Head>
+            <meta property="og:image" content="/avatar.png" />
+            <meta property="og:title" content="YUNTLIN" />
+            <meta property="og:description" content="안드로이드를 중심으로 개발 지식과 경험을 기록합니다." />
+            <meta property="og:url" content="https://blog-jaeyun.vercel.app/" />
+          </Head>
           <>
             {process.env.VERCEL_ENV === 'production' && config?.analytics?.provider === 'ackee' && (
               <Ackee

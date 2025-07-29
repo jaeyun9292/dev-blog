@@ -249,3 +249,88 @@ pre[class*='language-'] {
 .nobelium-toggle-content > :last-child {
   @apply mb-0;
 }
+
+/* 이미지를 더 크게 표시
+.notion-asset-wrapper img {
+  width: 120% !important;
+  height: auto !important;
+  max-width: 120% !important;
+  max-height: none !important;
+} */
+
+/* 캡션도 같이 넓게 */
+.notion-asset-caption {
+  /* width: 100% !important; */
+  /* max-width: 100% !important; */
+  text-align: left;
+}
+
+/* 이미지 컨테이너도 함께 조정 */
+/* .notion-asset-wrapper { */
+  /* width: 120% !important; */
+  /* max-width: 120% !important; */
+  /* margin-left: 20% !important; 중앙 정렬을 위해 */
+/* } */
+
+/* Prism text-shadow 제거 */
+pre[class*="language-"],
+code[class*="language-"],
+.notion-code,
+.token {
+  text-shadow: none !important;
+}
+
+/* 모든 코드 관련 요소에서 text-shadow 제거 */
+.notion-code *,
+pre[class*="language-"] *,
+code[class*="language-"] * {
+  text-shadow: none !important;
+}
+
+
+/* 코드 블록 내 모든 토큰의 배경색 제거 */
+.token.string,
+.token.attr-value,
+.token.template-string,
+.token.char,
+.token.regex,
+.token.variable,
+.token.interpolation,
+.token.interpolation-punctuation {
+  background: transparent !important;
+  background-color: transparent !important;
+}
+
+/* 모든 토큰의 배경 제거 */
+.token {
+  background: transparent !important;
+  background-color: transparent !important;
+}
+
+/* 코드 블록 전체 토큰 배경 제거 */
+pre[class*="language-"] .token,
+code[class*="language-"] .token {
+  background: transparent !important;
+  background-color: transparent !important;
+}
+
+
+/* 인라인 코드 크기 변경 */
+.notion-inline-code,
+code:not([class*="language-"]) {
+  padding: 2px 4px !important;
+  border-radius: 3px !important;
+  font-weight: 500 !important;
+}
+
+/* 다크모드에서 인라인 코드 */
+.dark .notion-inline-code,
+.dark code:not([class*="language-"]) {
+  background: #2b2b2b           !important;
+  color: #cccccc               !important; /* 노란색 */
+}
+
+body, * {
+  font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol" !important;
+  line-height: 1.6 !important;
+}

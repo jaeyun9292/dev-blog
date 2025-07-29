@@ -5,6 +5,8 @@ import { getTextContent } from 'notion-utils'
 import { FONTS_SANS, FONTS_SERIF } from '@/consts'
 import { useConfig } from '@/lib/config'
 import Toggle from '@/components/notion-blocks/Toggle'
+import 'prismjs/themes/prism-tomorrow.css' // 다크 테마
+
 
 // Lazy-load some heavy components & override the renderers of some block types
 const components = {
@@ -34,7 +36,9 @@ const components = {
                   import('prismjs/components/prism-cpp'),
                   import('prismjs/components/prism-csharp'),
                   import('prismjs/components/prism-docker'),
-                  import('prismjs/components/prism-java'),
+                  import('prismjs/components/prism-clike'), 
+                  import('prismjs/components/prism-java'),  
+                  import('prismjs/components/prism-kotlin'), 
                   import('prismjs/components/prism-js-templates'),
                   import('prismjs/components/prism-coffeescript'),
                   import('prismjs/components/prism-diff'),
@@ -137,6 +141,7 @@ export default function NotionRenderer (props) {
       <Renderer
         components={components}
         mapPageUrl={mapPageUrl}
+        darkMode={true}
         {...props}
       />
     </>
