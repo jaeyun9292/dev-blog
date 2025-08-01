@@ -23,7 +23,7 @@ export default function MyApp ({ Component, pageProps, config, locale }) {
       <LocaleProvider value={locale}>
         <ThemeProvider>
           <Head>
-            <meta property="og:image" content="/avatar.png" />
+            <meta property="og:site_name" content="Jaeyun’s Dev Blog" />
             <meta property="og:title" content="YUNTLIN" />
             <meta property="og:description" content="안드로이드를 중심으로 개발 지식과 경험을 기록합니다." />
             <meta property="og:url" content="https://blog-jaeyun.vercel.app/" />
