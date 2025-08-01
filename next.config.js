@@ -6,18 +6,23 @@ module.exports = {
     // dirs: ['components', 'layouts', 'lib', 'pages']
   },
   async headers() {
-    return [
-      {
-        source: '/:path*{/}?',
-        headers: [
-          {
-            key: 'Permissions-Policy',
-            value: 'interest-cohort=()'
-          }
-        ]
-      }
-    ]
-  },
+  return [
+    {
+      source: '/:path*{/}?',
+      headers: [
+        {
+          key: 'X-Robots-Tag',
+          value: 'index, follow'
+        },
+        {
+          key: 'Permissions-Policy',
+          value: 'interest-cohort=()'
+        }
+      ]
+    }
+  ]
+}
+  ,
   transpilePackages: ['dayjs']
   // webpack: (config, { dev, isServer }) => {
   //   // Replace React with Preact only in client production build
