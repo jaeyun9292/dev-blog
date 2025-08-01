@@ -8,7 +8,7 @@ import cn from 'classnames'
 
 const Container = ({ children, layout, fullWidth, ...customMeta }) => {
   const BLOG = useConfig()
-
+  const thumbnailUrl = 'https://blog-jaeyun.vercel.app/thumbnail.png'
   const url = BLOG.path.length ? `${BLOG.link}/${BLOG.path}` : BLOG.link
   const meta = {
     title: BLOG.title,
@@ -40,29 +40,11 @@ const Container = ({ children, layout, fullWidth, ...customMeta }) => {
           content={meta.slug ? `${url}/${meta.slug}` : url}
         />
 
-
-        {/* <meta
-          property="og:image"
-          content={`${BLOG.ogImageGenerateURL}/${encodeURIComponent(
-            meta.title
-          )}.png?theme=dark&md=1&fontSize=125px&images=https%3A%2F%2Fnobelium.vercel.app%2Flogo-for-dark-bg.svg`}
-        />
-        <meta property="og:type" content={meta.type} />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:description" content={meta.description} />
-        <meta name="twitter:title" content={meta.title} />
         <meta
-          name="twitter:image"
-          content={`${BLOG.ogImageGenerateURL}/${encodeURIComponent(
-            meta.title
-          )}.png?theme=dark&md=1&fontSize=125px&images=https%3A%2F%2Fnobelium.vercel.app%2Flogo-for-dark-bg.svg`}
-        /> */}
-
-                <meta
           property="og:image"
-          content={BLOG.ogImageGenerateURL 
+          content={BLOG.ogImageGenerateURL
             ? `${BLOG.ogImageGenerateURL}/${encodeURIComponent(meta.title)}.png?theme=dark&md=1&fontSize=125px&images=https%3A%2F%2Fnobelium.vercel.app%2Flogo-for-dark-bg.svg`
-            : `${url}/thumbnail.png`  // 기본 이미지로 대체
+            : thumbnailUrl
           }
         />
         <meta property="og:type" content={meta.type} />
@@ -71,9 +53,9 @@ const Container = ({ children, layout, fullWidth, ...customMeta }) => {
         <meta name="twitter:title" content={meta.title} />
         <meta
           name="twitter:image"
-          content={BLOG.ogImageGenerateURL 
+          content={BLOG.ogImageGenerateURL
             ? `${BLOG.ogImageGenerateURL}/${encodeURIComponent(meta.title)}.png?theme=dark&md=1&fontSize=125px&images=https%3A%2F%2Fnobelium.vercel.app%2Flogo-for-dark-bg.svg`
-            : `${url}/thumbnail.png`  // 기본 이미지로 대체
+            : thumbnailUrl
           }
         />
 
