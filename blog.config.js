@@ -15,6 +15,9 @@ const BLOG = {
   postsPerPage: 8, // 한 페이지에 표시할 글 수
   sortByDate: true, // 최신순 정렬 여부
   showAbout: true, // About 페이지 표시 여부
+  showCover: true, // Notion 커버 이미지 표시 여부
+  showPageIcon: true,
+  showIcon: true,
   showArchive: true, // Archive 페이지 표시 여부
   autoCollapsedNavBar: false, // 상단 내비게이션 자동 접힘 여부
   // ogImageGenerateURL: 'https://og-image-craigary.vercel.app', // The link to generate OG image, don't end with a slash

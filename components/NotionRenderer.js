@@ -5,7 +5,7 @@ import { getTextContent } from 'notion-utils'
 import { FONTS_SANS, FONTS_SERIF } from '@/consts'
 import { useConfig } from '@/lib/config'
 import Toggle from '@/components/notion-blocks/Toggle'
-import 'prismjs/themes/prism-tomorrow.css' // 다크 테마
+import 'prismjs/themes/prism-tomorrow.css'
 
 
 // Lazy-load some heavy components & override the renderers of some block types
